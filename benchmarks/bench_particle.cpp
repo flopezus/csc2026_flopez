@@ -1,4 +1,5 @@
 // CSC Latin America 2026 - Particle Benchmarks
+#include <vector>
 #include <benchmark/benchmark.h>
 #include "Particle.hpp"
 
@@ -69,5 +70,3 @@ static void BM_PtCalculationBatch(benchmark::State& state) {
     state.SetItemsProcessed(state.iterations() * n);
 }
 BENCHMARK(BM_PtCalculationBatch)->Range(64, 4096);
-
-BENCHMARK_MAIN();
